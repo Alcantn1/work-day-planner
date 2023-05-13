@@ -10,10 +10,20 @@ $(document).ready(() => {
       
       if (timeBlockHour < currentHour) {
         $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+
+
       } else if (timeBlockHour === currentHour) {
         $(this).addClass("present");
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+
+        
       } else {
         $(this).addClass("future");
+        $(this).removeClass("past");
+        $(this).removeClass("present");
       }
     });
   });
